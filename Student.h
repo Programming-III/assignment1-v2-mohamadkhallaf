@@ -1,31 +1,29 @@
-#ifndef INSTRUCTOR_H
-#define INSTRUCTOR_H
-#include <string>
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include "Person.h"
+#include <string>
 using namespace std;
-class Instructor:Person{
+class Student : Person{
 private:
-string department;
-int experienceYears;
+int yearLevel;
+string major;
 public:
+Student(string name,int id,int yearLevel,string major);
 void display();
-Instructor();
-Instructor(string name,int id,string department,int experienceYears);
-string getDepartment(){
-    return department;
+int getYearLevel(){
+    return yearLevel;
 }
-void setDepartment(string name)
+void setYearLevel(int yearLevel){
+    this->yearLevel=yearLevel;
+}
+string getMajor(){
+    return major;
+}
+void setMajor(string major)
 {
-    this->department=name;
+    this->major=major;
 }
-int getExperienceYears(){
-    return experienceYears;
-}
-void setExperienceYears(int experienceYears){
-    this->experienceYears=experienceYears;
-}
+
 };
-
 #endif
-
-
